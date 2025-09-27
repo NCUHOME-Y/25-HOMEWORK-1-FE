@@ -1,0 +1,26 @@
+div {
+    width: 500px;
+    height: 120px;
+    margin: 0 auto;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+p {
+    width: 500px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: lightgray;
+    border-color: black;
+    border: 1px solid blue;
+}
+
+.style1{
+    background-color: beige;
+}
+.style2{
+    background-color: azure;
+}
+.style3{
+    background-color: yellowgreen;
+}
