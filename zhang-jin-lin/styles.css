@@ -1,0 +1,31 @@
+.box{
+    border: 2px solid;
+	border-color: black;
+	width: 600px;
+    margin: 150px  auto ;
+    padding: 2px;
+    height: 400px;
+    font-size: 15px;
+}
+.name{
+margin: 10px 20px 10px ;
+}
+.Englishname{
+margin: 10px;
+margin-left: 20px;
+}
+.information{
+margin-left: 20px;
+margin-top:25px;
+margin-bottom: 15px;
+font-size: 1.2rem;
+}
+.tip{
+    margin: 10px;
+    background-color: pink;
+}
+.line{
+    height: 1px;
+    border-bottom: 1px solid;
+    margin: 10px ;
+    }
