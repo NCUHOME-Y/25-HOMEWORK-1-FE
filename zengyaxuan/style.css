@@ -1,0 +1,58 @@
+body {
+    background-image: url("background0.jpg");
+    background-size: cover;
+}
+.box-alternet {
+    height: 400px;
+    margin: 0 auto;
+    width: 50%;
+    background-color: lightblue;
+    margin-top: 100px;
+}
+.box-alternet h1 {
+    font-size: 80px;
+    margin-left: 5px;
+    margin-bottom: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+ }
+.box-alternet p {
+    margin-left: 25px;
+    margin-top: 0;
+}
+.email,
+.self-introduction,
+.skill-tags,
+.phone-number {
+    border: 1px solid white;
+    padding: 5px;
+    font-size: 30px;
+}
+.inline-box1 {
+    background-color: bisque;
+    padding: 2px;
+    border: 3px solid burlywood;
+    border-radius: 5px;
+}
+.inline-box2 {
+    background-color: chocolate;
+    padding: 2px;
+    border: 3px solid brown;
+    border-radius: 5px;
+}
+.inline-box3 {
+    background-color: darkcyan;
+    padding: 2px;
+    border: 3px solid darkblue;
+    border-radius: 5px;
+}
+.inline-box4 {
+    background-color:darkseagreen;
+    padding: 2px;
+    border: 3px solid darkslategray;
+    border-radius: 5px;
+}   
+span {
+    font-size: 20px;
+    margin-left: 10px;
+}
