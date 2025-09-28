@@ -1,0 +1,69 @@
+ body{
+        background-color: rgba(202, 200, 198, 0.705);
+        
+    }
+    .title{
+            margin: auto;
+            margin-top: 100px;
+            background-color: rgb(252, 252, 253);
+            padding: 20px;
+            border: 5px outset;
+            width: 500px;
+            height: auto;
+    }
+    .name{
+            font-size: 30px;
+    }
+    .telephone{
+        margin: auto;
+        background-color: rgb(252, 252, 253);
+        padding: 20px;
+        width: 500px;
+        border: 5px outset;
+        font-size: 20px;
+    }
+    .mailbox{
+        margin: auto;
+        background-color: rgb(252, 252, 253);
+        padding: 20px;
+        width: 500px;
+        border: 5px outset;
+        font-size: 20px;
+    }
+    .AboutMyself{
+        margin: auto;
+        background-color: rgb(252, 252, 253);
+        padding: 20px;
+        width: 500px;
+        border: 5px outset;
+        font-size: 20px;
+    }
+    .introduce{
+        margin-bottom: 20px;
+    }
+    .hobby2{
+        margin-left: 100px;
+    }
+    .hobby3{
+        margin-left: 100px;
+    }
+    .ability{
+        margin: auto;
+        background-color: rgb(252, 252, 253);
+        padding: 20px;
+        width: 500px;
+        border: 5px outset;
+        font-size: 20px;
+    }
+    .label1{
+        margin-left: 10px;
+        background-color: rgb(240, 187, 187);
+        border: 3px solid rgb(204, 130, 130);
+        border-radius: 10px;
+    }
+    .label2{
+        margin-left: 20px;
+        background-color: rgb(184, 221, 252);
+        border: 3px solid rgb(112, 150, 172);
+        border-radius: 10px;
+    }
