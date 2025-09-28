@@ -1,0 +1,50 @@
+.father {
+    width: 450px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: lightgray;
+    border: 1px solid black;
+    margin-top: 60px;
+}
+
+.son {
+    width: 350px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: lightgray;
+    border-color: black;
+    border: 1px solid blue;
+}
+
+.son h1{
+    width: 200px;
+    height: 32px;
+    margin: 0;
+}
+
+.son p{
+    margin: 5px;
+    font-size: 10px;
+}
+
+span{
+        margin: 5px;
+        font-size: 10px;
+}
+
+.style1{
+    background-color: beige;
+    border-color: black;
+    border-radius: 5px;
+
+}
+.style2{
+    background-color: azure;
+    border-color: black;
+    border-radius: 5px;
+}
+.style3{
+    background-color: yellowgreen;
+    border-color: black;
+    border-radius: 5px;
+}
