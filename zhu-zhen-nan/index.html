@@ -1,30 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>个人名片 - 张三</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <div style=" border: 1px solid black;">
-        <h1>zhang san</h1>
-        <p>i am zhang san</p>
-    </div>
-    <div style=" border: 1px solid black;">
-        <p>tel: 123456789</p>
-    </div>
-    <div style=" border: 1px solid black;">
-        <p>email: zhangsan@example.com</p>
-    </div>
-    <div style=" border: 1px solid black;">
-        <p>i am zhang san, a nobody</p>
-    </div>
-    <div style=" border: 1px solid black;">
-        <p>abilities:<span style="color: red;border: 1px solid red;">coding</span> , <span
-                style="color: rgb(51, 255, 0);border: 1px solid rgb(51, 255, 0);">designing</span>
-        </p>
+    <div class="business-card">
+        <!-- 姓名部分 -->
+        <div class="profile-section">
+            <div class="name-title">
+                <h1>张三</h1>
+                <h3>San Zhang</h3>
+            </div>
+        </div>
+
+        <!-- 联系信息 -->
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>130-0000-0000</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>zhangsan@example.com</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>北京市海淀区</span>
+            </div>
+        </div>
+
+        <!-- 个人简介 -->
+        <div class="bio-section">
+            <h3>自我介绍</h3>
+            <p>我是一名前端开发工程师, 擅长使用HTML、CSS、JavaScript等前端技术</p>
+        </div>
+
+        <!-- 技能标签 -->
+        <div class="skills-section">
+            <h3>能力标签</h3>
+            <div class="skills-container">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+            </div>
+        </div>
     </div>
 </body>
 
