@@ -77,3 +77,19 @@ func (num *Complex) String() string {
 	}
 	return fmt.Sprintf("%g%gi", num.real, num.imag)
 }
+
+func (num *Complex) GetReal() float64 {
+	return num.real
+}
+
+func (num *Complex) GetImag() float64 {
+	return num.imag
+}
+
+func (num *Complex) SetReal(real float64) {
+	num.real = real
+}
+
+func (num *Complex) SetImag(imag float64) {
+	num.imag = imag
+}
