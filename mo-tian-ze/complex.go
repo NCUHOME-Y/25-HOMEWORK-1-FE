@@ -93,3 +93,18 @@ func (num *Complex) SetReal(real float64) {
 func (num *Complex) SetImag(imag float64) {
 	num.imag = imag
 }
+
+// 测试
+func main() {
+	c1 := ResultComplex(3, 4)
+	c2 := ResultComplex(1, 2)
+
+	fmt.Printf("c1 = %s\n", c1)
+	fmt.Printf("c2 = %s\n", c2)
+	fmt.Printf("c1 + c2 = %s\n", c1.Add(c2))
+	fmt.Printf("c1 - c2 = %s\n", c1.Sub(c2))
+	fmt.Printf("c1 * c2 = %s\n", c1.Mul(c2))
+	fmt.Printf("c1 / c2 = %s\n", c1.Div(c2))
+	fmt.Printf("|c1| = %g\n", c1.Mod())
+	fmt.Printf("c1的共轭复数 = %s\n", c1.Conjugate())
+}
