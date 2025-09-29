@@ -8,11 +8,11 @@ body {
 /* 容器样式 固定margin居中 */
 .container {
     width: 700px;
-    margin: 0 200px;
+    margin: 0 auto;
 }
 
-/* 所有盒子 */
-.namebox, .contactbox, .emailbox, .showbox, .abilitybox {
+/*公共类名*/
+.box {    
     width: 700px;
     padding: 25px;
     border: 2px solid #ddd;
@@ -20,6 +20,7 @@ body {
     margin: 0;
     border-bottom: none;
 }
+
 
 /* 最后一个盒子要保留底部边框 */
 .abilitybox {
@@ -50,4 +51,29 @@ body {
 
 .ability {
     padding: 5px 0;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 2px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff; /* 白字彩底 */
+}
+
+.tag-green {
+    background-color: #4CAF50; 
+}
+
+.tag-blue {
+    background-color: #2196F3; 
+}
+
+.tag-orange {
+    background-color: #FF9800; 
+}
+
+.tag-purple {
+    background-color: #9C27B0; 
 }
