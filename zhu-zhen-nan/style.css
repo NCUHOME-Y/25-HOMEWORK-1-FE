@@ -1,0 +1,163 @@
+/* 基础重置与全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* 名片容器样式 */
+.business-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 2000px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* 姓名部分 */
+.profile-section {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #f0f0f0;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name-title h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.name-title h3 {
+    color: #666;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* 联系信息样式 */
+.contact-info {
+    margin-bottom: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.info-item:hover {
+    background: #f0f0f0;
+}
+
+.info-item i {
+    width: 25px;
+    color: #3498db;
+    font-size: 16px;
+}
+
+.info-item span {
+    color: #555;
+    font-size: 15px;
+}
+
+/* 个人简介部分 */
+.bio-section {
+    margin-bottom: 25px;
+}
+
+.bio-section h3,
+.skills-section h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+.bio-section p {
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* 技能标签部分 */
+.skills-section {
+    margin-bottom: 25px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: #3498db;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-3px);
+}
