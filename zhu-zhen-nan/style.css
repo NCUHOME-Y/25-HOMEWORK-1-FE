@@ -17,11 +17,12 @@ body {
 
 /* 名片容器样式 */
 .business-card {
+    margin: 0 auto;
     background: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 2000px;
+    max-width: 700px;
     padding: 30px;
     transition: all 0.3s ease;
 }
