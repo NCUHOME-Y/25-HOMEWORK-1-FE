@@ -1,125 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>林方魁简历</title>
+    <title>林方魁 - 个人简历</title>
     <style>
-        *{
-            box-sizing:border-box;
-            font-family:'Segoe UI',Geneva,verdana;
-            overflow:hidden;
-            margin:0;
-            padding:0;
-            cursor: default;
-            caret-color: transparent;
+        /* 全局样式重置 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        body{
-            background-color:#66ccff20
+
+        /* 字体和基础样式 */
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
-        .contain{
-            width:800px;
-            height:auto;
-            background:white;
-            border:2px solid #66ccff;
-            padding:20px;
-            margin:200px auto;
-            border-radius:10px;
+
+        /* 主容器 */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            animation: slideUp 0.8s ease-out;
         }
-        .head{
-            width:auto;
-            height:auto;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-            border-bottom: 1.5px solid #66ccff;
-        }
-        .head p{
-            color:rgba(128, 128, 128, 0.801)
-        }
-        .contact{
-            border-bottom: 1.5px solid rgba(128, 128, 128, 0.295);
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        .contact h2{
-            margin-bottom: 5px;
-        }
-        .introduce{
-            border-bottom: 1.5px solid rgba(128, 128, 128, 0.295);
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        .introduce h2{
-            margin-bottom: 5px;
-        }
-        .introduce a{
-            cursor: pointer;
-            text-decoration:none;
-            color:black;
-            font-weight:600;
-        }
-        .introduce a:hover{
-                color:#66ccff;
+
+        /* 动画效果 */
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
             }
-        .skill{
-            border-bottom: 1.5px solid rgba(128, 128, 128, 0.295);
-            padding-bottom: 10px;
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* 头部区域 */
+        .header {
+            background: linear-gradient(135deg, #66ccff, #4a90e2);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.05) 10px,
+                rgba(255, 255, 255, 0.05) 20px
+            );
+            animation: shimmer 20s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .header h1 {
+            font-size: 2.5em;
             margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
         }
-        .skill h2{
-            margin-bottom: 5px;
+
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
         }
-        .skill span{
-            border:1px solid;
+
+        /* 内容区域 */
+        .content {
+            padding: 30px;
+        }
+
+        /* 章节样式 */
+        .section {
+            margin-bottom: 30px;
+            border-left: 4px solid #66ccff;
+            padding-left: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            border-left-color: #4a90e2;
+            transform: translateX(5px);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(135deg, #66ccff, #4a90e2);
+        }
+
+        /* 联系信息样式 */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            fill: #66ccff;
+        }
+
+        /* 介绍区域 */
+        .intro-content {
+            background: #f8f9fa;
+            padding: 20px;
             border-radius: 15px;
-            margin:3px 5px;
-            padding:3px 8px;
+            margin-top: 15px;
         }
-        .skill span:nth-child(2){
-            background-color: #fff0f0;
-            border-color: #e74c3c;
-            color: #c0392b;
+
+        .intro-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #66ccff, #4a90e2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 204, 255, 0.3);
         }
-        .skill span:nth-child(3){
-            background-color: #f0f8ff;
-            border-color: #4a90e2;
-            color: #117be6;
+
+        .intro-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 204, 255, 0.4);
+            background: linear-gradient(135deg, #4a90e2, #66ccff);
         }
-        .skill span:nth-child(4){
-            background-color: #f0fff0;
-            border-color: #2ecc71;
-            color: #27ae60;
+
+        /* 技能标签 */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
         }
-        .skill span:nth-child(5){
-             background-color: #f6901c18;
-            border-color: #ff9900;
-            color: #ffb300;
+
+        .skill-tag {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .skill-tag:nth-child(1) {
+            background: #fff5f5;
+            border: 2px solid #e53e3e;
+            color: #c53030;
+        }
+
+        .skill-tag:nth-child(2) {
+            background: #ebf8ff;
+            border: 2px solid #3182ce;
+            color: #2b6cb0;
+        }
+
+        .skill-tag:nth-child(3) {
+            background: #f0fff4;
+            border: 2px solid #38a169;
+            color: #2f855a;
+        }
+
+        .skill-tag:nth-child(4) {
+            background: #fffbeb;
+            border: 2px solid #d69e2e;
+            color: #b7791f;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                margin: 0;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding-left: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .skills-container {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="contain">
-        <div class="head">
+    <div class="container">
+        <!-- 头部区域 -->
+        <div class="header">
             <h1>林方魁</h1>
-            <p>Lin,Fangkui(拼音)|Lin,Fong Kwai(英文)</p>
+            <p class="subtitle">Lin, Fangkui (拼音) | Lin, Fong Kwai (英文)</p>
         </div>
-        <div class="contact">
-            <h2>联系方式:</h2>
-            <p>电话:15880993898</p>
-            <p>邮箱:3903285203@qq.com</p>
-        </div>
-        <div class="introduce">
-            <h2>自我介绍:</h2>
-            <p>个人简介:</p>
-            <p>balabalabala...</p>
-            <a href="https://ncuhomer.feishu.cn/wiki/OzaEwttJdi27gBk3cRzcCHQxnFh" target="_blank">戳我查看详细个人说明书哦（＾ω＾）</a>
-        </div>
-        <div class="skill">
-            <h2>能力标签:</h2>
-            <span>没啥用</span>
-            <span>宅宅宅</span>
-            <span>无所谓</span>
-            <span>菜菜</span>
+
+        <!-- 内容区域 -->
+        <div class="content">
+            <!-- 联系方式 -->
+            <div class="section contact">
+                <h2>
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,8l-8,5L4,8V6l8,5 l8-5V8z"/>
+                    </svg>
+                    联系方式
+                </h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24">
+                            <path d="M6.62,10.79C8.06,13.62,10.38,15.94,13.21,17.38L15.41,15.18C15.69,14.9,16.08,14.82,16.43,14.93C17.55,15.3,18.75,15.5,20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25,8.7,6.45,9.07,7.57C9.18,7.92,9.1,8.31,8.82,8.59L6.62,10.79Z"/>
+                        </svg>
+                        <span>15880993898</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24">
+                            <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                        </svg>
+                        <span>3903285203@qq.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 自我介绍 -->
+            <div class="section introduce">
+                <h2>
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                    </svg>
+                    自我介绍
+                </h2>
+                <div class="intro-content">
+                    <p><strong>个人简介：</strong></p>
+                    <p style="margin-top: 10px; color: #666;">
+                        你好！我是林方魁，一个充满热情的学习者。虽然目前还在探索自己的道路，
+                        但我相信每一步的积累都会让我变得更好。我喜欢挑战新事物，
+                        也乐于在团队中发挥自己的作用。
+                    </p>
+                    <a href="https://ncuhomer.feishu.cn/wiki/OzaEwttJdi27gBk3cRzcCHQxnFh" 
+                       target="_blank" 
+                       class="intro-link">
+                        📖 查看详细个人说明书 (´▽｀)
+                    </a>
+                </div>
+            </div>
+
+            <!-- 能力标签 -->
+            <div class="section skills">
+                <h2>
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/>
+                    </svg>
+                    能力标签
+                </h2>
+                <div class="skills-container">
+                    <span class="skill-tag">努力学习中</span>
+                    <span class="skill-tag">团队合作</span>
+                    <span class="skill-tag">持续成长</span>
+                    <span class="skill-tag">积极向上</span>
+                </div>
+            </div>
         </div>
     </div>
 </body>
