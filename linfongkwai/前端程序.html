@@ -14,82 +14,84 @@
 
         /* 字体和基础样式 */
         body {
-            font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
+            font-family: 'Segoe UI', 'Microsoft YaHei',sans-serif; /* 优雅的字体组合，包含中文字体 */
+            line-height: 1.6; /* 适当的行高，提高文本可读性 */
+            color: #333; /* 深灰色文本，保护眼睛 */
+            background: linear-gradient(#66ccff19,#117ce697, #143fffc7); /* 渐变背景，营造现代感 */
+            min-height: 100vh; /* 确保页面至少占满整个视窗高度 */
+            padding: 20px; /* 为页面四周留出呼吸空间 */
         }
 
         /* 主容器 */
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            overflow: hidden;
-            animation: slideUp 0.8s ease-out;
+            max-width: 900px; /* 限制最大宽度，避免在大屏幕上过宽 */
+            margin: 0 auto; /* 水平居中对齐 */
+            background: rgba(255, 255, 255, 0.95); /* 半透明白色背景，实现玻璃拟态效果 */
+            border-radius: 20px; /* 圆角边框，现代化设计 */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* 深度阴影，增强立体感 */
+            backdrop-filter: blur(10px); /* 背景模糊效果，增强玻璃质感 */
+            overflow: hidden; /* 隐藏子元素溢出，保持容器边界清晰 */
+            animation: slideUp 0.8s ease-out; /* 页面加载时的上滑动画 */
         }
 
-        /* 动画效果 */
+        /* 动画效果 - 页面加载时的上滑入场动画 */
         @keyframes slideUp {
             from {
-                transform: translateY(50px);
-                opacity: 0;
+                transform: translateY(50px); /* 初始位置向下偏移50px */
+                opacity: 0; /* 初始透明度为0（完全透明） */
             }
             to {
-                transform: translateY(0);
-                opacity: 1;
+                transform: translateY(0); /* 最终位置不偏移 */
+                opacity: 1; /* 最终透明度为1（完全不透明） */
             }
         }
 
         /* 头部区域 */
         .header {
-            background: linear-gradient(135deg, #66ccff, #4a90e2);
-            color: white;
-            padding: 40px 30px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #66ccff, #4a90e2); /* 45度角渐变背景，从浅蓝到深蓝 */
+            color: white; /* 白色文字，与蓝色背景形成对比 */
+            padding: 40px 30px; /* 内边距，为文字留出充足空间 */
+            text-align: center; /* 文字居中对齐 */
+            position: relative; /* 相对定位，为伪元素提供定位参考 */
+            overflow: hidden; /* 隐藏溢出内容，确保动画效果不超出边界 */
         }
 
+        /* 头部区域的动态背景效果 */
         .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
+            content: ''; /* 伪元素必需的content属性 */
+            position: absolute; /* 绝对定位，相对于.header */
+            top: -50%; /* 向上扩展50%，确保完全覆盖 */
+            left: -50%; /* 向左扩展50%，确保完全覆盖 */
+            width: 200%; /* 宽度是容器的2倍 */
+            height: 200%; /* 高度是容器的2倍 */
             background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255, 255, 255, 0.05) 10px,
-                rgba(255, 255, 255, 0.05) 20px
+                45deg, /* 45度斜线渐变 */
+                transparent, /* 透明部分 */
+                transparent 10px, /* 透明部分宽度10px */
+                rgba(255, 255, 255, 0.05) 10px, /* 半透明白色部分起点 */
+                rgba(255, 255, 255, 0.05) 20px /* 半透明白色部分终点，宽度10px */
             );
-            animation: shimmer 20s linear infinite;
+            animation: shimmer 20s linear infinite; /* 20秒匀速无限循环的闪烁动画 */
         }
 
+        /* 闪烁动画 - 创造动态光影效果 */
         @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            0% { transform: translateX(-100%); } /* 动画开始：元素向左偏移100% */
+            100% { transform: translateX(100%); } /* 动画结束：元素向右偏移100% */
         }
 
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
+            font-size: 2.5em; /* 大号字体，突出姓名重要性 */
+            margin-bottom: 10px; /* 与副标题保持适当间距 */
+            position: relative; /* 相对定位，确保在动画背景之上 */
+            z-index: 1; /* 层级为1，确保在伪元素之上显示 */
         }
 
         .header .subtitle {
-            font-size: 1.1em;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
+            font-size: 1.1em; /* 稍大于普通文字的字号 */
+            opacity: 0.9; /* 略微降低透明度，形成层次感 */
+            position: relative; /* 相对定位，确保在动画背景之上 */
+            z-index: 1; /* 层级为1，确保在伪元素之上显示 */
         }
 
         /* 内容区域 */
@@ -99,176 +101,180 @@
 
         /* 章节样式 */
         .section {
-            margin-bottom: 30px;
-            border-left: 4px solid #66ccff;
-            padding-left: 20px;
-            transition: all 0.3s ease;
+            margin-bottom: 30px; /* 章节间距，保持清晰分离 */
+            border-left: 4px solid #66ccff; /* 左侧蓝色边框，作为视觉标识 */
+            padding-left: 20px; /* 左内边距，与边框保持距离 */
+            transition: all 0.3s ease; /* 所有属性的平滑过渡效果，持续0.3秒 */
         }
 
+        /* 章节悬停效果 */
         .section:hover {
-            border-left-color: #4a90e2;
-            transform: translateX(5px);
+            border-left-color: #4a90e2; /* 悬停时边框颜色变深 */
+            transform: translateX(5px); /* 悬停时向右轻微移动5px，增加交互感 */
         }
 
         .section h2 {
-            color: #2c3e50;
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            position: relative;
+            color: #2c3e50; /* 深灰蓝色，专业且易读 */
+            font-size: 1.4em; /* 适中的标题字号 */
+            margin-bottom: 15px; /* 与内容保持适当间距 */
+            position: relative; /* 相对定位，为伪元素提供参考 */
         }
 
+        /* 章节标题下的装饰线 */
         .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: linear-gradient(135deg, #66ccff, #4a90e2);
+            content: ''; /* 伪元素必需的content属性 */
+            position: absolute; /* 绝对定位，相对于h2元素 */
+            bottom: -5px; /* 位于标题下方5px处 */
+            left: 0; /* 从左边开始 */
+            width: 50px; /* 装饰线宽度50px */
+            height: 2px; /* 装饰线高度2px */
+            background: linear-gradient(135deg, #66ccff, #4a90e2); /* 渐变色装饰线 */
         }
 
         /* 联系信息样式 */
         .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
+            display: grid; /* 使用CSS Grid布局，比flexbox更适合二维布局 */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 自适应列数，每列最小250px */
+            gap: 15px; /* 网格项目间距15px */
+            margin-top: 15px; /* 与上方内容保持间距 */
         }
 
         .contact-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            transition: all 0.3s ease;
+            background: #f8f9fa; /* 浅灰色背景，与白色形成对比 */
+            padding: 15px; /* 内边距，为内容提供呼吸空间 */
+            border-radius: 10px; /* 圆角，保持设计一致性 */
+            display: flex; /* 弹性布局，使图标和文字水平排列 */
+            align-items: center; /* 垂直居中对齐 */
+            transition: all 0.3s ease; /* 所有属性平滑过渡 */
         }
 
         .contact-item:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background: #e9ecef; /* 悬停时背景稍微变深 */
+            transform: translateY(-2px); /* 悬停时向上移动2px，增加浮起效果 */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 悬停时添加阴影，增强立体感 */
         }
 
         .contact-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-            fill: #66ccff;
+            width: 20px; /* 图标宽度 */
+            height: 20px; /* 图标高度 */
+            margin-right: 10px; /* 与右侧文字保持间距 */
+            fill: #66ccff; /* SVG图标填充色，与主题色保持一致 */
         }
 
         /* 介绍区域 */
         .intro-content {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 15px;
-            margin-top: 15px;
+            background: #f8f9fa; /* 浅灰色背景，突出介绍内容 */
+            padding: 20px; /* 内边距，为文字提供舒适的阅读空间 */
+            border-radius: 15px; /* 圆角设计，与整体风格保持一致 */
+            margin-top: 15px; /* 与标题保持适当间距 */
         }
 
         .intro-link {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #66ccff, #4a90e2);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(102, 204, 255, 0.3);
+            display: inline-block; /* 行内块元素，可以设置padding等块级属性 */
+            margin-top: 15px; /* 与上方文字保持间距 */
+            padding: 12px 24px; /* 内边距，让按钮看起来更饱满 */
+            background: linear-gradient(135deg, #66ccff, #4a90e2); /* 渐变背景，与主题色一致 */
+            color: white; /* 白色文字，与蓝色背景形成对比 */
+            text-decoration: none; /* 移除下划线 */
+            border-radius: 25px; /* 圆角按钮，现代化设计 */
+            font-weight: 600; /* 稍粗的字重，增加按钮的重要性 */
+            transition: all 0.3s ease; /* 所有属性平滑过渡 */
+            box-shadow: 0 5px 15px rgba(102, 204, 255, 0.3); /* 蓝色阴影，增加按钮的立体感 */
         }
 
         .intro-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 204, 255, 0.4);
-            background: linear-gradient(135deg, #4a90e2, #66ccff);
+            transform: translateY(-2px); /* 悬停时向上移动，增加交互反馈 */
+            box-shadow: 0 8px 20px rgba(102, 204, 255, 0.4); /* 悬停时阴影更深更大 */
+            background: linear-gradient(135deg, #4a90e2, #66ccff); /* 悬停时反转渐变方向 */
         }
 
         /* 技能标签 */
         .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 15px;
+            display: flex; /* 弹性布局，让标签可以灵活排列 */
+            flex-wrap: wrap; /* 允许换行，适应不同屏幕宽度 */
+            gap: 12px; /* 标签之间的间距 */
+            margin-top: 15px; /* 与标题保持间距 */
         }
 
         .skill-tag {
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 500;
-            font-size: 0.9em;
-            transition: all 0.3s ease;
-            cursor: default;
+            padding: 8px 16px; /* 内边距，让标签看起来饱满 */
+            border-radius: 20px; /* 圆角设计，现代化风格 */
+            font-weight: 500; /* 中等字重，突出标签文字 */
+            font-size: 0.9em; /* 稍小的字号，避免喧宾夺主 */
+            transition: all 0.3s ease; /* 所有属性平滑过渡 */
+            cursor: default; /* 默认鼠标样式，表示不可点击 */
         }
 
+        /* 技能标签颜色方案 - 使用nth-child选择器为不同标签设置不同颜色 */
         .skill-tag:nth-child(1) {
-            background: #fff5f5;
-            border: 2px solid #e53e3e;
-            color: #c53030;
+            background: #fff5f5; /* 浅粉色背景 */
+            border: 2px solid #e53e3e; /* 红色边框 */
+            color: #c53030; /* 深红色文字 */
         }
 
         .skill-tag:nth-child(2) {
-            background: #ebf8ff;
-            border: 2px solid #3182ce;
-            color: #2b6cb0;
+            background: #ebf8ff; /* 浅蓝色背景 */
+            border: 2px solid #3182ce; /* 蓝色边框 */
+            color: #2b6cb0; /* 深蓝色文字 */
         }
 
         .skill-tag:nth-child(3) {
-            background: #f0fff4;
-            border: 2px solid #38a169;
-            color: #2f855a;
+            background: #f0fff4; /* 浅绿色背景 */
+            border: 2px solid #38a169; /* 绿色边框 */
+            color: #2f855a; /* 深绿色文字 */
         }
 
         .skill-tag:nth-child(4) {
-            background: #fffbeb;
-            border: 2px solid #d69e2e;
-            color: #b7791f;
+            background: #fffbeb; /* 浅黄色背景 */
+            border: 2px solid #d69e2e; /* 橙黄色边框 */
+            color: #b7791f; /* 深橙色文字 */
         }
 
         .skill-tag:hover {
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px) scale(1.05); /* 悬停时向上移动并略微放大 */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 悬停时添加阴影效果 */
         }
 
-        /* 响应式设计 */
+        /* 响应式设计 - 针对平板设备的适配 */
         @media (max-width: 768px) {
             body {
-                padding: 10px;
+                padding: 10px; /* 在小屏幕上减少页面边距 */
             }
             
             .container {
-                margin: 0;
-                border-radius: 15px;
+                margin: 0; /* 移除左右边距，让容器占满屏幕宽度 */
+                border-radius: 15px; /* 减小圆角，适应小屏幕 */
             }
             
             .header {
-                padding: 30px 20px;
+                padding: 30px 20px; /* 减少头部内边距 */
             }
             
             .header h1 {
-                font-size: 2em;
+                font-size: 2em; /* 减小标题字号 */
             }
             
             .content {
-                padding: 20px;
+                padding: 20px; /* 减少内容区域内边距 */
             }
             
             .contact-info {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* 强制单列布局 */
             }
             
             .section {
-                padding-left: 15px;
+                padding-left: 15px; /* 减少左内边距 */
             }
         }
 
+        /* 响应式设计 - 针对手机设备的适配 */
         @media (max-width: 480px) {
             .header h1 {
-                font-size: 1.8em;
+                font-size: 1.8em; /* 进一步减小标题字号 */
             }
             
             .skills-container {
-                justify-content: center;
+                justify-content: center; /* 在小屏幕上让技能标签居中显示 */
             }
         }
     </style>
