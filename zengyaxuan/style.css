@@ -3,7 +3,7 @@ body {
     background-size: cover;
 }
 .box-alternet {
-    height: 400px;
+    min-height: 400px;
     margin: 0 auto;
     width: 50%;
     background-color: lightblue;
