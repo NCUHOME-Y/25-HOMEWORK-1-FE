@@ -2,29 +2,34 @@
     width: 450px;
     height: 350px;
     margin: 0 auto;
-    background-color: lightgray;
+    background-color: white;
     border: 1px solid black;
     margin-top: 60px;
+    padding: 20px;
 }
 
-.son {
-    width: 350px;
-    height: 60px;
-    margin: 0 auto;
-    background-color: lightgray;
-    border-color: black;
-    border: 1px solid blue;
+.info{
+    margin-bottom: 10px;
 }
 
-.son h1{
+.info h1{
     width: 200px;
     height: 32px;
     margin: 0;
 }
 
-.son p{
+.info p{
     margin: 5px;
     font-size: 10px;
+}
+
+.father p{
+    margin: 10px 30px;
+    font-size: 14px;
+}
+
+.tag{
+    margin: 15px 30px;
 }
 
 span{
@@ -39,7 +44,7 @@ span{
 
 }
 .style2{
-    background-color: azure;
+    background-color: green;
     border-color: black;
     border-radius: 5px;
 }
