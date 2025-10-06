@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(203 206 210 / 73%);
+}
+
+.CV {
+    width: 550px;
+    margin: 200px auto;
+    background-color: #ffffff;
+    border: 1px solid #c5bebe;
+    padding: 8px 6px;
+}
+
+.info-block {
+    padding: 15px 50px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tags-section {
+    border-bottom: none;
+    padding-bottom: 22px;
+}
+
+.tag-label {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+
+.tag {
+    font-size: 12px;
+    padding: 4px 8px;
+    margin-right: 8px;
+    color: #ffffff;
+}
+
+.tag-red {
+    background-color: #d17272;
+    border: 2px solid #acacac;
+}
+
+.tag-yellow {
+    background-color: #e1c42c;
+    border: 2px solid #dfca5f;
+}
+
+.tag-blue {
+    background-color: #24c6c6;
+    border: 2px solid #58d5d5;
+}
